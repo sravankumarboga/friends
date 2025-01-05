@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chinese-Noodles</title>
+        <link rel="stylesheet"href="{% static 'vegfoods.css' %}">
+        <link rel="stylesheet"href="{% static 'andhra-ruchulu.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-color border border-primary">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <img src="media/andhra icons/Andhra-Ruchulu-Logo2.jpg"alt="Andhra-Ruchulu-Logo"class="logo">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">
+                      <button type="button" class="btn btn-outline-primary">
+                        <i class="fa fa-home" aria-hidden="true">   Home</i>
+                      </button>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="veg">
+                      <button type="button" class="btn btn-outline-primary">veg</button>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="nonveg" >
+                      <button type="button" class="btn btn-outline-primary">Non-veg</button>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="chinese">
+                      <button type="button" class="btn btn-outline-primary">Chinese-Noodles</button>
+                    </a>
+                  </li>
+                </ul>
+                
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </button>
+              </div>
+            </div>
+          </nav>
+          <div class="border border-primary">
+            <a class="nav-link dropdown-toggle menu bg-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-bars" aria-hidden="true">
+                  Menu
+              </i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="veg">Veg</a></li>
+              <li><a class="dropdown-item" href="nonveg">Non-veg</a></li>
+              <li><a class="dropdown-item"href="chinese">Chinese-Noodles</a></li>
+              <li><a class="dropdown-item" href="">Veg-Curyes</a></li>
+              <li><a class="dropdown-item" href="">Non-veg-Curyes</a></li>
+              <li><a class="dropdown-item" href="">Snacks</a></li>
+              <li><a class="dropdown-item" href="">Sweets</a></li>
+              <li><a class="dropdown-item" href="">I-crems</a></li>
+            </ul>
+          </div>
+            {% block content %}
+            {% for a in chinesefood %}
+            <div class="order">
+                <img src="{{a.order_image.url}}" alt="{{a.order_price}}"class="foodimg">
+                  <div class="foodtext">
+                    <b>name:&nbsp;&nbsp;</b>{{a.order_name}}
+                    <br>
+                    <b>Discription:&nbsp;&nbsp;</b>{{a.order_about}}
+                    <br>
+                    <b>price:&nbsp;&nbsp;</b>{{a.order_price}}
+                   </div>
+                <div>
+                    <form class="foodtext">
+                        <label>Select your offer</label>
+                        <br>
+                        <input type="radio"name="offer1"id="fffer1"value="offer1"><span>30% by ICIC credit card</span>
+                        <br>
+                        <input type="radio"name="offer1"id="fffer1"value="offer1"><span>40% by SBI credit card</span>
+                    </form>
+                    <button class="btn btn-primary button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                        Order
+                    </button>
+                </div>
+                <br>
+            </div>
+            {% endfor %}
+            {% endblock %}
+
+
+
+
+
+
+
+
+
+
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 id="offcanvasRightLabel">Settings</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Edit Profile Settings</button>
+                </div>
+              </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Edit Profile Settings</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form action="newtab.html"method="get">
+                    <table>
+                      <tr>
+                        <th>User_name</th>
+                        <td><input type="text"name="user_name"id="user_name"placeholder="Enter your User name"></td>
+                      </tr>
+                      <tr>
+                        <th>Mobile_number</th>
+                        <td><input type="tel"name="mobile"id="mobile"placeholder="Enter your Mobile Number"></td>
+                      </tr>
+                      <tr>
+                        <th>Email</th>
+                        <td><input type="email"name="email"id="email"placeholder="Enter your Email_Address"></td>
+                      </tr>
+                      <tr>
+                        <th>password</th>
+                        <td><input type="password"name="password"id="password"placeholder="Enter your password"></td>
+                      </tr>
+                      <tr>
+                        <th>Address</th>
+                        <td><textarea name="address"id="address"cols="30"rows="5"placeholder="ENter your Address"></textarea></td>
+                      </tr>
+                    </table>
+                  </form>
+                  <button type="button" class="btn btn-info button">
+                    <a href="file:///E:/sravan/Chinese-Noodels.html">Edit</a>
+                  </button>
+                </div>
+              </div>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Order</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Select Payment Method</label>
+                      <select name="payment"meyhod="payment">
+                        <option value="online">Online</option>
+                        <option value="paytm">paytm</option>
+                        <option value="phonepay">Phonepay</option>
+                        <option value="googlepay">Googlepay</option>
+                        <option value="offline">Offline</option>
+                      </select>
+                      <br>
+                      Your order placed Successfully
+    
+                      Thank you for visiting ourWeb site
+                    </div>
+                  </form>
+                  <button type="button" class="btn btn-info button">
+                    <a class="nav-link" href="file:///E:/sravan/Chinese-Noodels.html">Order</a>
+                  </button>
+                </div>
+              </div>
+    </body>
+</html>

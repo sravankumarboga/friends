@@ -1,0 +1,44 @@
+.img{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.order{
+    display: flex;
+    flex-direction: row;
+}
+.ordersuccess{
+    background-color: aquamarine;
+}
+.bottun{
+    margin-left: 20px;
+    margin-top: 40px;
+    height: auto;
+}
+.foodtext{
+    margin-left: 20px;
+    width: 500px;
+}
+.foodimg{
+    height: 200px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.register{
+    margin-top: 30px;
+    text-align: center;
+}
+.messages{
+    color: red;
+}
+.login{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.profilename{
+    color: blue;
+    width: 200px;
+    height: 100px;
+}

@@ -1,0 +1,113 @@
+
+.itag{
+    height: 100px;
+    width: 100px;
+    font-size: 50%;
+}
+.Help{
+    margin-left: 10px;
+}
+.login{
+    text-align: center;
+    margin-top: 10px;
+}
+.img{
+    margin-left: 150px;
+}
+.logo{
+    height:70px;
+    width: 70px;
+    border-radius: 70px;
+}
+.carousel-img{
+    image-resolution: 1080mp;
+    height: 500px;
+    width: 1150px;
+}
+.card2{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.button{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.menu{
+    max-width: 100px;
+}
+.bg-color{
+    background-color: rgb(30, 240, 240);
+}
+.websitecaption{
+    font-size: large;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    background-color: rgb(30, 240, 240);
+    height: 60px;
+    /*text-shadow: 10px -5px 2px blue;*/
+}
+.cardimg{
+    height: 200px;
+}
+.Aboutusimg{
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.Aboutus{
+    margin-top: 200px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.Aboutustext{
+    margin-top: 100px;
+}
+.settings-btn{
+    margin-bottom: 5px;
+}
+.setting{
+    margin-left: 5px;
+}
+.designer{
+    float: right;
+}
+.designer2{
+    font-weight: bolder;
+    font-style: italic;
+}
+.Aboutustext2{
+    margin-top: 150px;
+    margin-right: 100px;
+}
+.itemcart{
+    margin-right:5px;
+}
+.your_orders{
+    color: goldenrod;
+    text-align: center;
+    margin-right: 500px;
+    width: max-content;
+}
+.your_orders_menu{
+    justify-content: end;
+    margin-left: 1270px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.your_orders_button{
+    color: whight;
+}
+.Hotelbutton{
+    margin-right: 5px;
+}
+.Hotelbutton2{
+    margin-bottom: 5px;
+}
+.itemcartbutton{
+    margin-top: 20px;
+}
